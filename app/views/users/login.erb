@@ -1,11 +1,21 @@
-<h1>Login Now! Or Else...</h1>
+  
+<h2> Welcome, </h2>
+<h1> Login </h1>
 
 <form action="/login" method="POST">
-  <label for="username">Username: </label> <br>
-  <input type="text" name="user[username]" id="username"> <br>
-  <label for="password">Password: </label> <br>
-  <input type="password" name="user[password]" id="password"> <br>
+  <p>
+    <lable for="email">Email:</lable>
+    <input type="text" name="email" id="email"/>
+  </p>
+  <p>
+    <lable for="password">Password:</lable>
+    <input type="text" name="password" id="password"/>
+  </p>
+  <p>
+    <lable for="username">Username:</lable>
+    <input type="text" name="username" id="username"/>
+  </p>
 
-  <input type="submit" value="Login" id="submit">
+  <input type="submit" id="submit" placeholder="Login" />
 
 </form>
