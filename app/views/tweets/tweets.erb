@@ -1,12 +1,22 @@
-<h1>Welcome, This is the Tweets Index.</h1>
-<h2>You are going to love this tweets!</h2>
+<h1>"Welcome, "</h1>
+<h2>All Tweets:</h2>
 
-<%@tweets.each do |tweet|%>
-  <h4>User: <%=tweet.user.username if tweet.user%></h4>
-  <h4>Tweet:</h4>
-  <p><%=tweet.content%></p>
-<%end%>
+<ul>
+<% @tweets.each do |tweet| %>
+   <li><a href="/tweets/<%= tweet.id %>"> <%= tweet.id %> </a>
+       <a><%= tweet.content %> </a></li>
+<% end %>
+</ul>
 
-<form action="/logout" method="POST">
-  <input type="submit" value="Logout" id="submit">
-</form>
+<ul>
+  <a class="button" href="/login">Login</a>
+
+  <a class="button" href="/signup">Signup</a>
+
+  <a class="button" href="/tweets">Tweets</a>
+
+  <a class="button" href="/logout">Logout</a>
+</ul>
+<br>
+  <a class="button" href="/tweets/new">New Tweet</a>
+</br>
